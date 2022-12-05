@@ -36,8 +36,8 @@ router.post("/create-checkout-session", async (req, res) => {
     line_items,
     mode: "payment",
     customer: customer.id,
-    success_url: `${process.env.CLIENT_URL}/success?customer_id=${customer.id}`,
-    cancel_url: `${process.env.CLIENT_URL}/cart`,
+    success_url: `/success?customer_id=${customer.id}`,
+    cancel_url: `/cart`,
   });
 
   const lineItems = await stripe.checkout.sessions.listLineItems(session.id);
