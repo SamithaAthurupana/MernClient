@@ -16,7 +16,7 @@ const Success = () => {
           const res = await userRequest.get(`/orders/findorder/${customer_id}`);
           setImg(res.data);
         } else {
-          window.location.href = "http://localhost:3000";
+          window.location.href = "/";
         }
       } catch (err) {
         console.log(err);

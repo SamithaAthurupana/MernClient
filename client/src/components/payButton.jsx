@@ -15,7 +15,7 @@ const Button = styled.button`
 
 const PayButton = ({ cartItems }) => {
   const user = useSelector((state) => state.user.currentUser);
-  const url = "http://localhost:5000/api";
+  const url = "/api";
 
   const handleCheckout = () => {
     axios
